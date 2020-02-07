@@ -14,7 +14,7 @@ public class MusicLibraryClient {
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++");
 
-        myLibrary.doubleSize();
+        //myLibrary.doubleSize();
 
         System.out.println(myLibrary);
 

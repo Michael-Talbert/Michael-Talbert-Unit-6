@@ -2,6 +2,7 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class FrequencyChart {
+    /*
     //Class stuff
     private int[] list;
 
@@ -54,4 +55,5 @@ public class FrequencyChart {
 
         FrequencyChart chart = new FrequencyChart(data);
     }
+    */
 }
