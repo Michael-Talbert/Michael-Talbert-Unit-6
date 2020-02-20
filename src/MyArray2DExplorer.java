@@ -1,4 +1,4 @@
-public class MyArray2DExplorer {
+/*public class MyArray2DExplorer {
 
     public static void main(String[] args) {
         int array [][] = {  {4,1,8,5},
@@ -27,26 +27,16 @@ public class MyArray2DExplorer {
     }
 
     //WRITE YOUR METHODS BELOW
+    //public boolean evenRow(int [][] mat, int row){
 
-    public boolean evenRow(int [][] mat, int row){
-
-    }
+   // }
 
     //returns true if the sum of the numbers the given col is odd.
 
-}
+//}
 
 
-    public int[] minRow(int [][] mat){
+   // public int[] minRow(int [][] mat){
 
-    }
-
-
-
-
-
-
-
-
-
-}
+   }
+*/
