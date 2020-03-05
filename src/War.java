@@ -14,7 +14,7 @@ public class War {
     }
 
     public void game(){
-        p1.getCar
+        p1.getCard();
     }
 
     public static void main(String[] args) {
