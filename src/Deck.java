@@ -2,19 +2,30 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    ArrayList<Card> deck = new ArrayList<Card>;
-
+    private ArrayList<Card> deck;
 
     public Deck(){
-        for(int i = 0; i<3; i++){
-            for (int x = 0; x<12; x++){
-                deck.add(new Card(i, x));
+        deck = new ArrayList<>();
+        for (String rank: Card.RANK) {
+            for(String suit: Card.SUIT){
+                deck.add(new Card(rank, suit));
             }
         }
     }
+
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+
 
     public void shuffle(){
         Collections.shuffle(deck);
     }
 
+    public static void main(String[] args) {
+        Deck d = new Deck();
+        System.out.println(d.getDeck());
+        d.shuffle();
+        System.out.println(d.getDeck());
+    }
 }

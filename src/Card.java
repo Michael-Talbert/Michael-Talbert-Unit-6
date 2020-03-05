@@ -1,21 +1,40 @@
-public class Card {
-    private int suite;
-    private int value;
+public class Card implements Comparable{
+    public static final String[] RANK = {"A", "K", "Q", "J", "10", "9", "8",
+            "7", "6", "5", "4", "3", "2"};
+    public static final String[] SUIT = {"♤", "♡", "♢", "♧"};
+    private String rank;
+    private String suit;
 
-    public Card(int suite, int value){
-        this.suite=suite;
-        this.value=value;
+    public Card(String rank, String suit){
+        this.rank = rank;
+        this.suit = suit;
     }
 
-
-    public int getValue(){
-        return value;
+    public String getRank() {
+        return rank;
     }
 
-    public int getSuite(){
-        return suite;
+    public String getSuit() {
+        return suit;
     }
 
+    public int compareTo(Object other){
+        Card otherCard = (Card) other;
+        return this.getRankValue() - otherCard.getRankValue();
+    }
+
+    public int getRankValue(){
+        for (int i = 0; i < RANK.length; i++) {
+            if(this.rank.equals(RANK[i])){
+                return 14 - i;
+            }
+        }
+        return -1;
+    }
+
+    public String toString(){
+        return rank + suit;
+    }
 
 
 }

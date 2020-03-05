@@ -1,15 +1,34 @@
 import java.util.ArrayList;
 
 public class Player {
-    private int numPlayers = 0;
+    private int id;
+    private ArrayList<Card> hand;
+    private Deck theDeck;
 
-    public player(int id){
-        ArrayList<Card> id+"deck" = new ArrayList<Card>();
+    public Player(int id, Deck deck){
+        this.id = id;
+        theDeck = deck;
+        hand = new ArrayList<>();
     }
 
-    public void dealDeck(){
-        for (int i = 0; i<numPlayers; i++){
+    public void drawCard(){
+        hand.add(theDeck.getDeck().remove(0));
+    }
 
+    public void initHand(int numCards){
+        for (int i = 0; i < numCards; i++) {
+            drawCard();
         }
     }
+
+    public String toString(){
+        return "Player " + id + ": " + hand;
+    }
+
+    public String getCard(int count){
+        return hand(count).getSuit();
+    }
+
+
+
 }
